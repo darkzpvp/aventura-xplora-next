@@ -27,7 +27,7 @@ const handleChangeModal2 = () => {
         <article className = 'contenido-header'>
           <div className = 'icono-menu-lateral-header icono-menu-lateral-wrapper hidden'>
             <img  className = 'icono-menu-lateral' src = '/icons/header/menu.svg' alt = 'menu lateral'
-   
+      onClick={handleChangeModal2}
             />
           </div>
 

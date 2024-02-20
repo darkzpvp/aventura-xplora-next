@@ -1,6 +1,6 @@
 .cta-form-section {
   background-color: transparent;
-  z-index: 10000;
+  z-index: 20000;
   position: fixed;
   top: 50%;
   left: 50%;

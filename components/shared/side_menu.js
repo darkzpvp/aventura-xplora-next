@@ -1,10 +1,10 @@
 'use client'
 
-import React from 'react'
+import {useState} from 'react'
 import Link from 'next/link'
 import '@/styles/shared/side-menu/menu/style.css'
 import '@/styles/shared/side-menu/overlay/style.css'
-
+import CtaForm from './cta_form'
 
 
   export default function SideMenu({ modal, setModal }) {
@@ -19,7 +19,11 @@ import '@/styles/shared/side-menu/overlay/style.css'
     }
   
  
+  const [modal2, setModal2] = useState(false)
 
+  const handleChangeModal = () => {
+    setModal2(!modal2)
+  }
   return (
     <>
    
@@ -182,10 +186,11 @@ import '@/styles/shared/side-menu/overlay/style.css'
               </div>
 
               <div className = 'side-menu--button side--menu-cta-button'>
-                <a>
+                <a onClick={handleChangeModal}>
                   <div className = 'side-menu--button--left'>
                     <img className = 'side-menu--button--icon' src = '/icons/side-menu/options/icon15.svg' alt = 'cinta' />
                     <p>CTA</p>
+                    {modal2 && <CtaForm modal={modal2} setModal={setModal2} />}
                   </div>
                   <img className = 'side-menu--button--icon' src = '/icons/side-menu/options/chevron.svg' alt = 'flecha' />
                 </a>
